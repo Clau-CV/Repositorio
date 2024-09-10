@@ -45,7 +45,7 @@ import math # ayuda de math
 def cuad_ent (a,b): # establecer función
     r_a = math.ceil(math.sqrt(a)) # 1° entero, raíz >=a
     r_b = math.floor(math.sqrt(b)) # 2° entero, raíz <=b
-    return max(0, r_b - r_a +1)
+    return max(r_b - r_a)
 
 answ = cuad_ent(a, b) # esta es la respuesta
 print("Ok, el no. de cuadrados es:", answ) # imprimir
@@ -103,16 +103,11 @@ print('El no. de "a"s es:', resp)
 # _ _ _ _ _ _           Terminado         Terminado
 
 # ESCRIBE TU CÓDIGO AQUÍ
-def cont_bas (long): # definir función
-    res = []
+## Ahhhh
+# def cont_bas (long): # definir función
     while long:
         res.append(len(long))
-        min_long = min(long)
-        long = [x - min_long for x in long if x - min_long > 0]
+        long = [for x in long if x > 0]
     return res
-
-# con el ejemplo
-ex_bastones = [5, 4, 4, 2, 2, 8]
-res = cont_bas(ex_bastones)
-print (res)
-
+pass
+### No...
